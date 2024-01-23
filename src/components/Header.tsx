@@ -23,25 +23,24 @@ export default function Header({token, setToken} : Props){
             console.log(err, "42 42 42 42");
             
         }
-    }, [token, setToken])
+    }, [token, setToken]);
 
     const onSubmit = (evt: React.FormEvent) => {
         evt.preventDefault()
         const target = evt.target as HTMLFormElement
+
         const respToken = async () => {
             const res = await UserService.getToken(target.login.value, target.password.value)
             setToken(res)
-            
         }
-        void respToken()
 
+        void respToken()
     }
 
     const onClick = () => {
         setToken(null)
         localStorage.setItem('token', '')
     }
-
 
     return (
         <div className="header__wrapper">

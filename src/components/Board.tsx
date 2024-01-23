@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import UserService from "./UserService"
 import { v4 } from "uuid"
 
+
 interface Props {
     token : string | null,
     setToken : React.Dispatch<React.SetStateAction<string | null>>
@@ -24,7 +25,7 @@ export default function Board({token, setToken} : Props){
             }
             
             }
-    }, [token, setToken])
+    }, [token, setToken]);
 
     if (!token) {
         return (
@@ -35,11 +36,9 @@ export default function Board({token, setToken} : Props){
             </div> 
         )
 
-    }
-
+    };
 
     return (
-     
         <div className="news__wrapper">
             {datas && datas.map((data) => { return (
                 <div className="news" key={v4()}>
@@ -47,9 +46,9 @@ export default function Board({token, setToken} : Props){
                     <h2>{data.title}</h2>
                     <span>{data.content}</span>
                 </div>
-            )
-            })}
-            
+                )   
+            })
+            }
         </div>
     )
 }

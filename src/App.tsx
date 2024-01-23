@@ -1,24 +1,16 @@
 import { useState } from 'react'
-
-
-
 import './App.css'
-
 import Header from './components/Header';
 import Board from './components/Board';
-
-
-
 
 
 export function App() {
     const [token, setToken] = useState<string | null>(null)
     const tokenStorage = localStorage.getItem("token")
 
-    if (tokenStorage && !token) {setToken(tokenStorage)}
-    
-
-
+    if (tokenStorage && !token) {
+        setToken(tokenStorage)
+    };
     
     return (
         <div id="app">
@@ -28,6 +20,5 @@ export function App() {
         </div>
     );
 }
-
 
 export default App
