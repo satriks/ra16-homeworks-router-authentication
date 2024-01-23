@@ -1,0 +1,139 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+#app{
+  width: 1000px;
+  min-height: 300px;
+  background-color: whitesmoke;
+  color: black;
+  overflow-y: auto;
+
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.header__wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 80px;
+  align-items: baseline;
+  padding: 20px;
+}
+  .header__form{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    
+  }
+
+  .header__form > input {
+    color: black;
+  }
+
+#login, #password {
+  background-color: white;
+  height: 40px;
+}
+#header__btn{
+  background-color: lightgreen;
+  height: 45px;
+}
+
+.intro{
+  background-color: lightgray;
+  margin: 20px 50px;
+  min-height: 200px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.intro > h2 {
+  font-size: 44px;
+  padding-top: 40px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.news__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+  gap: 20px;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  /* height: 500px; */
+  /* border: 10px solid red; */
+  width: 400px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+}
+
+.news > img {
+  width: 400px;
+  height: 300px;
+  border-bottom: 1px solid black;
+  background-color: lightskyblue;
+}
+
+.news > h2 {
+  text-align: left;
+  padding: 0 20px;
+}
+
+.news > span {
+  text-align: left;
+  padding: 0 20px;
+ }
+
+.user__info{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user__info > img {
+  border-radius: 50%;
+}
+
+.user__info > button {
+  color: lightpink;
+  background-color: whitesmoke;
+  border: 1px solid lightpink;
+}
